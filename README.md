@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# Diabetic Retinopathy Detection
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+Diabetic Retinopathy is a severe complication of diabetes that can lead to vision loss if not detected early. This project leverages **Artificial Intelligence (AI)** and **Deep Learning** techniques to automate the detection of Diabetic Retinopathy using **fundus images**. It employs a custom **Convolutional Neural Network (CNN)** with **ResNet blocks** to provide accurate and efficient predictions.
 
-## Available Scripts
+## Features
+- **Multi-Model Predictions**: Processes images through three machine learning models and displays predictions from each.
+- **Image Preprocessing**: Resizes fundus images to (224, 224) for consistent input to the models.
+- **Frontend-Backend Integration**: React.js frontend communicates with a Python backend hosted on Google Colab.
+- **User-Friendly Interface**: Simple and intuitive web application for healthcare professionals and other users.
 
-In the project directory, you can run:
+## Technology Stack
+### Frontend
+- **React.js**: For building a responsive and user-friendly web interface.
 
-### `npm start`
+### Backend
+- **Python**: Handles image preprocessing and model inference.
+- **Flask**: REST API to serve the models and facilitate communication with the frontend.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Machine Learning
+- **TensorFlow/Keras**: Used for training and deploying the CNN models.
+- **ResNet Architecture**: Improves feature extraction for enhanced prediction accuracy.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## How It Works
+1. **Image Upload**: Users upload retinal fundus images via the frontend.
+2. **Model Inference**: The backend processes the image and provides predictions from three pre-trained models.
+3. **Result Display**: Predictions are displayed on the frontend for analysis and diagnosis.
+4. **Diagnosis**: Helps in identifying the presence and severity of Diabetic Retinopathy.
 
-### `npm test`
+## Data Pipeline
+- **Input Data**: Fundus images of retinas from publicly available datasets.
+- **Preprocessing**: Images are resized to (224, 224) and normalized.
+- **Training**: A custom CNN with ResNet blocks is trained on labeled data.
+- **Inference**: Models evaluate new images for Diabetic Retinopathy detection.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Project Structure
+Diabetic-Retinopathy-Detection/ ├── public/ ├── src/ │ ├── App.js │ ├── BlindnessDetection.js │ ├── Frame.js │ ├── Signup.js │ └── ... ├── backend/ │ ├── app.py │ ├── models/ │ │ ├── model1.h5 │ │ ├── model2.h5 │ │ └── model3.h5 │ └── utils.py ├── README.md ├── package.json └── ...
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation and Usage
+### Prerequisites
+- Node.js and npm installed for the frontend.
+- Python 3.x and required dependencies for the backend.
+- Pre-trained model files, e.g., `copy_of_retina_weights.keras`.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
