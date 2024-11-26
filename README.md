@@ -34,7 +34,24 @@ Diabetic Retinopathy is a severe complication of diabetes that can lead to visio
 - **Inference**: Models evaluate new images for Diabetic Retinopathy detection.
 
 ## Project Structure
-Diabetic-Retinopathy-Detection/ ├── public/ ├── src/ │ ├── App.js │ ├── BlindnessDetection.js │ ├── Frame.js │ ├── Signup.js │ └── ... ├── backend/ │ ├── app.py │ ├── models/ │ │ ├── model1.h5 │ │ ├── model2.h5 │ │ └── model3.h5 │ └── utils.py ├── README.md ├── package.json └── ...
+Diabetic-Retinopathy-Detection/
+├── public/
+├── src/
+│ ├── App.js
+│ ├── BlindnessDetection.js
+│ ├── Frame.js
+│ ├── Signup.js
+│ └── ...
+├── backend/
+│ ├── app.py
+│ ├── models/
+│ │ ├── model1.h5
+│ │ ├── model2.h5
+│ │ └── model3.h5
+│ └── utils.py
+├── README.md
+├── package.json
+└── ...
 
 
 ## Installation and Usage
